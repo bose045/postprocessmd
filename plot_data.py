@@ -4,6 +4,8 @@ import argparse
 import ast
 import pandas as pd
 
+# eg: python plot_data.py log.lammps --columns Step PotEng TotEng --instance last --xlabel "Timestep" --ylabel "Energy" --legends '["PE","Total"]'
+
 def parse_data_segments(filename, column_names):
     """Parse the file and extract data segments based on headers."""
     with open(filename, 'r') as file:
