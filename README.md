@@ -1,46 +1,40 @@
-# Script-name: plot_data.pye
-
-Script for plotting log files easily.
-eg. usage: python plot_data.py log.lammps --columns Step PotEng TotEng --instance last --xlabel "Timestep" --ylabel "Energy" --legends '["PE","Total"]'
-
-
-## Table of Contents
-- [Project Name](#project-name)
-  - [Table of Contents](#table-of-contents)
-  - [Description](#description)
-  - [Requirements](#requirements)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Additional Features](#additional-features)
-  - [Contributing](#contributing)
-  - [License](#license)
+# plot_data.py
 
 ## Description
 
-Detailed description of the project, its purpose, and functionality.
+`plot_data.py` is a Python script for plotting data from log files with customizable options.
 
 ## Requirements
 
-List of requirements or dependencies needed to run the project, including programming languages, libraries, etc.
+- Python 3.x
+- matplotlib
+- pandas
 
 ## Installation
 
-Step-by-step instructions on how to install or set up the project, including any necessary configuration steps.
+1. Clone or download the `plot_data.py` script to your local machine.
+2. Ensure that you have Python 3.x installed.
+3. Install the required dependencies using pip:
+
 
 ## Usage
 
-Instructions on how to use the project, including command-line usage or GUI instructions.
+```bash
+python plot_data.py filename [--instance INSTANCE] [--columns COLUMNS [COLUMNS ...]] [--xlabel XLABEL] [--ylabel YLABEL] [--legends LEGENDS] [--logscale]
+eg: python plot_data.py log.lammps --columns Step PotEng TotEng --instance last --xlabel "Timestep" --ylabel "Energy" --legends '["PE","Total"]'
 
-## Additional Features
+Arguments
+filename: Path to the data file.
+--instance INSTANCE: Instance to plot: "first", "last", or an integer (1-based). Default is "first".
+--columns COLUMNS [COLUMNS ...]: Column names or indices to plot. First one is x-axis, followed by one or more y-axis columns.
+--xlabel XLABEL: Label for the x-axis. Default is "X-axis".
+--ylabel YLABEL: Label for the y-axis. Default is "Y-axis".
+--legends LEGENDS: List of legends as a string (e.g., '["Curve 1", "Curve 2"]'). Default is None.
+--logscale: Set log scale for the y-axis. Default is False.
 
-Optional section for listing additional features or future enhancements of the project.
+Additional Notes
 
-## Contributing
-
-Guidelines for contributing to the project, including how to report issues or submit pull requests.
-
-## License
-
-Information about the project's license, including licensing terms and any applicable copyright notices.
-
+The script automatically detects and parses data segments within the log file based on the provided column names.
+If column names are not specified, the script will attempt to identify them from the header line in the log file.
+The plotted data can be customized with options such as xlabel, ylabel, legends, and logscale.
 
