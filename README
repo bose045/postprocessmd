@@ -1,6 +1,8 @@
-# Project Name
+# Script-name: plot_data.pye
 
-Brief description of the project.
+Script for plotting log files easily.
+eg. usage: python plot_data.py log.lammps --columns Step PotEng TotEng --instance last --xlabel "Timestep" --ylabel "Energy" --legends '["PE","Total"]'
+
 
 ## Table of Contents
 - [Project Name](#project-name)
