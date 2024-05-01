@@ -21,7 +21,7 @@
 
 ```bash
 python plot_data.py filename [--instance INSTANCE] [--columns COLUMNS [COLUMNS ...]] [--xlabel XLABEL] [--ylabel YLABEL] [--legends LEGENDS] [--logscale]
-eg: python plot_data.py log.lammps --columns Step PotEng TotEng --instance last --xlabel "Timestep" --ylabel "Energy" --legends '["PE","Total"]'
+eg: python plot_data.py log.lammps --outfile time_vs_energy.png --columns Step PotEng TotEng --instance last --xlabel "Timestep" --ylabel "Energy" --legends '["PE","Total"]'
 
 Arguments
 filename: Path to the data file.
@@ -31,6 +31,7 @@ filename: Path to the data file.
 --ylabel YLABEL: Label for the y-axis. Default is "Y-axis".
 --legends LEGENDS: List of legends as a string (e.g., '["Curve 1", "Curve 2"]'). Default is None.
 --logscale: Set log scale for the y-axis. Default is False.
+--outfile: filename for outputfile 
 
 Additional Notes
 
