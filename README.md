@@ -2,7 +2,7 @@
 
 ## Description
 
-`plot_data.py` is a Python script for plotting data from log files with customizable options.
+`plot_data.py` is a Python script for plotting data from log files with customizable options, specially suitable for log files from lammps. You might have multiple data segments in the file. But the script will collect the data from the asked segment and plot them.
 
 ## Requirements
 

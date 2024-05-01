@@ -21,7 +21,7 @@ def parse_data_segments(filename, columns):
                 header_map = {col: parts.index(col) for col in columns}
                 headers = parts
                 collecting = True
-                print(f"Starting data collection at line {line_counter}: {line.strip()}")
+                #print(f"Starting data collection at line {line_counter}: {line.strip()}")
                 continue
 
             if collecting:
@@ -29,10 +29,10 @@ def parse_data_segments(filename, columns):
                     selected_data = [parts[header_map[col]] for col in columns]
                     buffer.append(selected_data)
                 else:
-                    print(f"Non-data line or format mismatch at line {line_counter}: {line.strip()}")
+                    #print(f"Non-data line or format mismatch at line {line_counter}: {line.strip()}")
                     if buffer:
                         segments.append(pd.DataFrame(buffer, columns=columns))
-                        print(f"Ending data collection at line {line_counter}: {line.strip()} with {len(buffer)} rows collected")
+                        #print(f"Ending data collection at line {line_counter}: {line.strip()} with {len(buffer)} rows collected")
                         buffer = []
                     collecting = False
 
@@ -106,8 +106,8 @@ def main():
 
     ax.legend()
     plt.tight_layout()
+    plt.savefig(args.outfile)   
     plt.show()
-
 if __name__ == "__main__":
     main()
 
