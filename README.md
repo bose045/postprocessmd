@@ -21,9 +21,7 @@ You can install these packages using pip:
 ```bash
 pip install pandas matplotlib numpy
 
-**## Usage**
-
-Usage
+## Usage
 
 Basic Command Structure
 bash
