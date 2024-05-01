@@ -1,8 +1,8 @@
-# plot_data.py
+# logplot.py
 
 ## Description
 
-`plot_data.py` is a Python script for plotting data from log files with customizable options, specially suitable for log files from lammps. You might have multiple data segments in the file. But the script will collect the data from the asked segment and plot them.
+`logplot.py` is a Python script for plotting data from log files with customizable options, specially suitable for log files from lammps. You might have multiple data segments in the file. But the script will collect the data from the asked segment and plot them.
 
 ## Requirements
 
@@ -12,7 +12,7 @@
 
 ## Installation
 
-1. Clone or download the `plot_data.py` script to your local machine.
+1. Clone or download the `logplot.py` script to your local machine.
 2. Ensure that you have Python 3.x installed.
 3. Install the required dependencies using pip:
 
@@ -20,8 +20,8 @@
 ## Usage
 
 ```bash
-python plot_data.py filename [--instance INSTANCE] [--columns COLUMNS [COLUMNS ...]] [--xlabel XLABEL] [--ylabel YLABEL] [--legends LEGENDS] [--logscale]
-python plot_data.py log.lammps --outfile time_vs_energy.png --columns Step PotEng TotEng --instance last --xlabel "Timestep" --ylabel "Energy" --legends '["PE","Total"]'
+python logplot.py filename [--instance INSTANCE] [--columns COLUMNS [COLUMNS ...]] [--xlabel XLABEL] [--ylabel YLABEL] [--legends LEGENDS] [--logscale]
+python logplot.py log.lammps --outfile time_vs_energy.png --columns Step PotEng TotEng --instance last --xlabel "Timestep" --ylabel "Energy" --legends '["PE","Total"]'
 Arguments
 filename: Path to the data file.
 --instance INSTANCE: Instance to plot: "first", "last", or an integer (1-based). Default is "first".
