@@ -21,8 +21,7 @@
 
 ```bash
 python plot_data.py filename [--instance INSTANCE] [--columns COLUMNS [COLUMNS ...]] [--xlabel XLABEL] [--ylabel YLABEL] [--legends LEGENDS] [--logscale]
-eg: python plot_data.py log.lammps --outfile time_vs_energy.png --columns Step PotEng TotEng --instance last --xlabel "Timestep" --ylabel "Energy" --legends '["PE","Total"]'
-
+python plot_data.py log.lammps --outfile time_vs_energy.png --columns Step PotEng TotEng --instance last --xlabel "Timestep" --ylabel "Energy" --legends '["PE","Total"]'
 Arguments
 filename: Path to the data file.
 --instance INSTANCE: Instance to plot: "first", "last", or an integer (1-based). Default is "first".
