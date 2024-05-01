@@ -46,4 +46,5 @@ python logplot.py <filename> --columns <column_names> [options]
 
 ```bash
 python logplot.py data.csv --columns Step PotEng TotEng --operations "Step=Step/1e6" "PE=PotEng/1000" --plot_columns Step PE --xlabel "Timestep (ns)" --ylabel "Potential Energy (kJ)" --legends '["Timestep","Potential Energy"]' --logscale --outfile "energy_plot.png"
-=
+
+python logplot.py log.lammps --columns Step Pxx Pyy Pzz Press --operations "Step=Step/1e6" "Press=Press/100" "Pxx=Pxx/100" "Pyy=Pyy/100" "Pzz=Pzz/100" --instance last --xlabel Timestep --ylabel Pressure --outfile Time_vs_Pressure.png
