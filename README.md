@@ -33,7 +33,7 @@ python logplot.py <filename> --columns <column_names> [options]
 
 ### Optional Arguments
 
-- **`--operations`**: Specifies mathematical operations to apply to the columns, e.g., `"new_col=x1+x2"`.
+- **`--operations`**: Specifies mathematical operations to apply to the columns, e.g., `"Step=Step/1e6"`.
 - **`--plot_columns`**: Specifies which columns to plot against each other, e.g., `x`, `y`.
 - **`--xlabel`**: Label for the x-axis.
 - **`--ylabel`**: Label for the y-axis.
